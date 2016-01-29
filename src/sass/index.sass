@@ -1,0 +1,499 @@
+@import "variables"
+
+body
+  background: #fff
+  text-align: center
+  margin: 0
+  padding: 0
+
+.container
+  max-width: 100%
+
+.row
+  display: table
+  height: inherit
+
+img
+  border: 3px solid #000 
+
+h1
+  font-size: 50px
+  margin-top: 0
+
+h3
+  font-size: 30px
+  padding-top: 100px
+  font-weight: bold
+
+p
+  font-size: 20px
+
+button
+  border: none
+  width: 300px
+  padding: 20px
+  border-radius: 6px
+  font-size: 16px
+  font-weight: bold
+  background-repeat: repeat-x
+  &:hover
+    cursor: pointer
+  &.primary-btn
+    background: #4a90e2
+    color: white
+    border-color: #0c69ae
+    border: 1px solid black
+    text-shadow: 0 1px 0 #03497d
+    &:hover
+      background: #0a70bc
+      @include transition(.2s)
+
+  &.secondary-btn
+    border-color: #e0e0df
+    text-shadow: 1px 1px 1px #fff
+    background: #f3f2ef
+    border: 1px solid
+    color: #0a70bc
+    &:hover
+      background: #ccc
+      @include transition(.2s)
+
+nav
+  position: fixed
+  top: 0
+  width: 100%
+  padding: 20px
+  background-color: #4a90e2
+  z-index: 1
+  border-bottom: 1px solid black
+
+ul.header-list
+  padding: 20px
+  margin: 0
+  li
+    list-style-type: none
+    display: inline
+    padding: 20px
+  a
+    color: #fff
+    text-decoration: none
+    text-transform: uppercase
+    font-weight: bold
+    font-size: $font-small
+    &:hover
+      color: #000
+      @include transition(.2s)
+
+.contact
+  position: absolute
+  display: inline
+  right: 80px
+  top: 35px
+
+.providers
+  position: absolute
+  right: 250px
+  top: 35px
+  padding-right: 20px
+
+.logo
+  position: absolute
+  left: 40px
+  top: 35px
+
+section
+  height: 600px
+  
+  &.main-area
+    padding-top: 155px
+    
+    p
+      padding: 225px 150px
+      font-size: $font-medium
+  
+  &.secondary-area
+    border-top: 2px solid #000
+    background: #d8d8d8
+  
+  &.fourth-area
+    border-top: 2px solid #000
+    background: #d8d8d8
+    background: #fff
+    
+    p
+      padding: 20px 200px
+      margin-bottom: 50px
+    
+    .primary-btn, .secondary-btn
+      display: block
+      margin: 0 auto
+      margin-top: 20px
+  
+  &.third-area, &.fifth-area
+    background: #000
+
+  &.sixth-area
+    h3
+      padding: 0
+      margin-top: 0
+    p
+      text-align: center
+      padding: 0 80px
+
+aside
+  width: 50%
+  height: inherit
+  display: table-cell
+  &.left
+    vertical-align: middle
+    h3
+      padding: 0
+      margin-top: 0
+    p
+      text-align: center
+      padding: 0 80px
+  &.right
+    vertical-align: middle
+
+/*animation element*/
+
+.animation-element
+  opacity: 0
+  &.slide-right
+   opacity: 0
+   -moz-transition: all 1000ms linear
+   -webkit-transition: all 1000ms linear
+   -o-transition: all 1000ms linear
+   transition: all 1000ms linear
+   -moz-transform: translate3d(-100px, 0px, 0px)
+   -webkit-transform: translate3d(-100px, 0px, 0px)
+   -o-transform: translate(-100px, 0px)
+   -ms-transform: translate(-100px, 0px)
+   transform: translate3d(-100px, 0px, 0px)
+   &.in-view
+     opacity: 1
+     -moz-transform: translate3d(0px, 0px, 0px)
+     -webkit-transform: translate3d(0px, 0px, 0px)
+     -o-transform: translate(0px, 0px)
+     -ms-transform: translate(0px, 0px)
+     transform: translate3d(0px, 0px, 0px)
+
+  &.slide-left
+    opacity: 0
+    -moz-transition: all 1000ms linear
+    -webkit-transition: all 1000ms linear
+    -o-transition: all 1000ms linear
+    transition: all 1000ms linear
+    -moz-transform: translate3d(300px, 0px, 0px)
+    -webkit-transform: translate3d(300px, 0px, 0px)
+    -o-transform: translate(300px, 0px)
+    -ms-transform: translate(300px, 0px)
+    transform: translate3d(300px, 0px, 0px)
+    &.in-view
+      opacity: 1
+      -moz-transform: translate3d(0px, 0px, 0px)
+      -webkit-transform: translate3d(0px, 0px, 0px)
+      -o-transform: translate(0px, 0px)
+      -ms-transform: translate(0px, 0px)
+      transform: translate3d(0px, 0px, 0px)
+
+/*animation element sliding left*/
+
+.bounce-up
+  .subject
+    opacity: 0
+    -moz-transition: all 700ms ease-out
+    -webkit-transition: all 700ms ease-out
+    -o-transition: all 700ms ease-out
+    transition: all 700ms ease-out
+    -moz-transform: translate3d(0px, 200px, 0px)
+    -webkit-transform: translate3d(0px, 200px, 0px)
+    -o-transform: translate(0px, 200px)
+    -ms-transform: translate(0px, 200px)
+    transform: translate3d(0px, 200, 0px)
+    -webkit-backface-visibility: hidden
+    -moz-backface-visibility: hidden
+    backface-visibility: hidden
+  &.in-view .subject
+    opacity: 1
+    -moz-transform: translate3d(0px, 0px, 0px)
+    -webkit-transform: translate3d(0px, 0px, 0px)
+    -o-transform: translate(0px, 0px)
+    -ms-transform: translate(0px, 0px)
+    transform: translate3d(0px, 0px, 0px)
+
+footer
+  background: #000
+  text-align: center
+  height: 300px
+  h3
+    color: white
+  p
+    color: white
+    padding-top: 70px
+  img
+    width: 20px
+    height: 20px
+    border: none
+    .pulse
+      padding: 20px 40px
+      color: #fff
+      background-color: #ff3296
+      animation: pulsate 1s ease infinite
+      transition: transform 0.2s
+      +keyframes(pulsate)
+       0%
+          transform: scale(1)
+       50%
+          transform: scale(1.1)
+       100%
+          transform: scale(1)
+
+
+
++respond-to(large)
+
++respond-to(medium)
+ section
+   &.main-area
+     p
+       padding: 80px
+       font-size: 20px
+   &.secondary-area
+     aside.left, aside.right
+       padding: 20px
+       p
+         padding: 10px
+         font-size: 14px
+   &.third-area
+
+   &.fourth-area
+     aside.left, aside.right
+       padding: 20px
+     p
+       padding: 10px
+       font-size: 14px
+
+   &.fifth-area
+
+   &.sixth-area
+     aside.left, aside.right
+       padding: 20px
+     p
+       padding: 10px
+       font-size: 14px
+
+
+ button
+   width: 100px
+
+ img
+   width: 15px
+   height: 15px
+
+ h1, h3
+   font-size: 20px
+ h3
+   margin-top: 0
+ 
+ ul.header-list
+   a
+     font-size: 13px
+ 
+ .animation-element
+   opacity: 0
+   &.slide-right
+    opacity: 0
+    -moz-transition: none
+    -webkit-transition: none
+    -o-transition: none
+    transition: none
+    -moz-transform: none
+    -webkit-transform: none
+    -o-transform: none
+    -ms-transform: none
+    transform: none
+    &.in-view
+      opacity: 1
+      -moz-transform: none
+      -webkit-transform: none
+      -o-transform: none
+      -ms-transform: none
+      transform: none
+
+   &.slide-left
+     opacity: 0
+     -moz-transition: none
+     -webkit-transition: none
+     -o-transition: none
+     transition: none
+     -moz-transform: none
+     -webkit-transform: none
+     -o-transform: none
+     -ms-transform: none
+     transform: none
+     &.in-view
+       opacity: 1
+       -moz-transform: none
+       -webkit-transform: none
+       -o-transform: none
+       -ms-transform: none
+       transform: none
+
+ /*animation element sliding left*/
+
+ .bounce-up
+   .subject
+     opacity: 0
+     -moz-transition: none
+     -webkit-transition: none
+     -o-transition: none
+     transition: none
+     -moz-transform: none
+     -webkit-transform: none
+     -o-transform: none
+     -ms-transform: none
+     transform: none
+     -webkit-backface-visibility: none
+     -moz-backface-visibility: none
+     backface-visibility: none
+   &.in-view .subject
+     opacity: 1
+     -moz-transform: none
+     -webkit-transform: none
+     -o-transform: none
+     -ms-transform: none
+     transform: none
+
+
+
+
+
+
++respond-to(small)
+  section
+    &.main-area
+      p
+        padding: 80px
+        font-size: 20px
+    &.secondary-area
+      aside.left, aside.right
+        padding: 20px
+        p
+          padding: 10px
+          font-size: 14px
+    &.third-area
+
+    &.fourth-area
+      aside.left, aside.right
+        padding: 20px
+      p
+        padding: 10px
+        font-size: 14px
+
+    &.fifth-area
+
+    &.sixth-area
+      aside.left, aside.right
+        padding: 20px
+      p
+        padding: 10px
+        font-size: 14px
+
+
+  button
+    width: 100px
+
+  img
+    width: 100px
+    height: 100px
+
+  h1, h3
+    font-size: 20px
+  h3
+    margin-top: 0
+  
+  ul.header-list
+    -webkit-padding-start: 0
+    -webkit-margin-before: 0
+    -webkit-margin-after: 0
+    li
+      padding: 10px
+    a
+      font-size: 13px
+
+  .logo, .providers, .contact
+    position: static
+
+  .providers
+    padding: 0
+  
+  .animation-element
+    opacity: 0
+    &.slide-right
+     opacity: 0
+     -moz-transition: none
+     -webkit-transition: none
+     -o-transition: none
+     transition: none
+     -moz-transform: none
+     -webkit-transform: none
+     -o-transform: none
+     -ms-transform: none
+     transform: none
+     &.in-view
+       opacity: 1
+       -moz-transform: none
+       -webkit-transform: none
+       -o-transform: none
+       -ms-transform: none
+       transform: none
+
+    &.slide-left
+      opacity: 0
+      -moz-transition: none
+      -webkit-transition: none
+      -o-transition: none
+      transition: none
+      -moz-transform: none
+      -webkit-transform: none
+      -o-transform: none
+      -ms-transform: none
+      transform: none
+      &.in-view
+        opacity: 1
+        -moz-transform: none
+        -webkit-transform: none
+        -o-transform: none
+        -ms-transform: none
+        transform: none
+
+  /*animation element sliding left*/
+
+  .bounce-up
+    .subject
+      opacity: 0
+      -moz-transition: none
+      -webkit-transition: none
+      -o-transition: none
+      transition: none
+      -moz-transform: none
+      -webkit-transform: none
+      -o-transform: none
+      -ms-transform: none
+      transform: none
+      -webkit-backface-visibility: none
+      -moz-backface-visibility: none
+      backface-visibility: none
+    &.in-view .subject
+      opacity: 1
+      -moz-transform: none
+      -webkit-transform: none
+      -o-transform: none
+      -ms-transform: none
+      transform: none
+
+
+
+  
+     

@@ -1,0 +1,84 @@
+$mobile-width: 320px
+$tablet-width:  768px
+$desktop-width: 1024px
+$highdef-width: 1400px
+
+/* SASS VARIABLES */
+
+$primary-color: #4a90e2
+$secondary-color: #d8d8d8
+$white: white
+$black: #000
+$large-padding: 155px
+$medium-padding: 100px
+$small-padding: 50px
+$padding-wrap: 20px
+$font-large: 50px
+$font-medium: 30px
+$font-small: 20px 
+
+/* BREAKPOINTS */
+
+
+=respond-to($breakpoint)
+  @if $breakpoint == "small"
+    @media only screen and (min-width: 320px) and (max-width: 520px)
+      @content
+    
+  @else if $breakpoint == "medium"
+    @media only screen and (min-width: 521px) and (max-width: 768px)
+      @content
+
+
+  @else if $breakpoint == "large"
+    @media only screen and (min-width: 769px) and (max-width: 1140px)
+      @content
+
+/* MIXINS */
+
+=transition($duration)
+  -webkit-transition: $duration
+  -moz-transition: $duration
+  -ms-transition: $duration
+  -o-transition: $duration
+  transition: $duration
+
+=keyframes($animationName)
+    @-webkit-keyframes #{$animationName}
+      @content
+
+    @-moz-keyframes #{$animationName}
+      @content
+
+    @-o-keyframes #{$animationName}
+      @content
+
+    @keyframes #{$animationName}
+      @content
+
+
+=animate($name, $duration, $iteration, $direction)
+  -webkit-animation-duration: $duration
+  -moz-animation-duration: $duration
+  -o-animation-duration: $duration
+  animation-duration: $duration
+
+  -webkit-animation-iteration-count: $iteration
+  -moz-animation-iteration-count: $iteration
+  -o-animation-iteration-count: $iteration
+  animation-iteration-count: $iteration
+
+  -webkit-animation-name: $name
+  -moz-animation-name: $name
+  -o-animation-name: $name
+  animation-name: $name
+
+  -webkit-animation-direction: $direction
+  -moz-animation-direction: $direction
+  -o-animation-direction: $direction
+  animation-direction: $direction
+  
+=pulsate
+  +animate(pulsate, 0.6s, infinite, normal)
+
+
